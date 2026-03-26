@@ -232,7 +232,7 @@ class LaptopProvider extends ChangeNotifier {
         graphics: 'AMD R4 Onboard',
         screenSize: 14.6,
         displayType: 'HD',
-        price: 12507,
+        price: 12508,
         stock: 1,
         imageUrl: 'assets/images/Lenovo-E41-1.jpg',
         thumbnailUrl: 'assets/thumbnails/Lenovo-E41-1.jpg',
