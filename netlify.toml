@@ -1,5 +1,5 @@
 [build]
-  command = "flutter build web --release"
+  command = "build.bat"
   publish = "build/web"
 
 [[plugins]]
