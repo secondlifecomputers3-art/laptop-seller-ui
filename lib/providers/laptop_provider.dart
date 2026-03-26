@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/laptop.dart';
+import 'package:flutter/services.dart'; // for rootBundle
 
 class LaptopProvider extends ChangeNotifier {
   List<Laptop> _laptops = [];
@@ -40,34 +41,40 @@ class LaptopProvider extends ChangeNotifier {
     print('🔑 Password updated');
   }
 
-  Future<void> _loadLaptops() async {
-    print('📂 _loadLaptops() started');
-    try {
-      final prefs = await SharedPreferences.getInstance();
-      final String? laptopsJson = prefs.getString(_storageKey);
+Future<void> _loadLaptops() async {
+  print('📂 _loadLaptops() started');
+  try {
+    final prefs = await SharedPreferences.getInstance();
+    final String? laptopsJson = prefs.getString(_storageKey);
 
-      if (laptopsJson != null && laptopsJson.isNotEmpty) {
-        print('📦 Found saved data, length: ${laptopsJson.length}');
-        final List<dynamic> jsonList = json.decode(laptopsJson);
-        _laptops = jsonList.map((json) => Laptop.fromJson(json)).toList();
-        print('✅ Loaded ${_laptops.length} laptops from storage');
-        for (var laptop in _laptops) {
-          print('   - ${laptop.brand} ${laptop.model}, images: ${laptop.images.length}');
-        }
-      } else {
-        print('📝 No saved data – loading sample data');
-        _initializeSampleData();
-        await _saveLaptops();
-        print('💾 Sample data saved');
+    if (laptopsJson != null && laptopsJson.isNotEmpty) {
+      print('📦 Found saved data, length: ${laptopsJson.length}');
+      final List<dynamic> jsonList = json.decode(laptopsJson);
+      _laptops = jsonList.map((json) => Laptop.fromJson(json)).toList();
+      print('✅ Loaded ${_laptops.length} laptops from storage');
+      for (var laptop in _laptops) {
+        print('   - ${laptop.brand} ${laptop.model}, images: ${laptop.images.length}');
       }
-    } catch (e, stack) {
-      print('❌ Error loading laptops: $e');
-      print(stack);
-      _initializeSampleData();
+    } else {
+      print('📝 No saved data – loading from JSON file');
+      // Load from assets/laptops.json
+      final String jsonString = await rootBundle.loadString('assets/laptops.json');
+      final List<dynamic> jsonList = json.decode(jsonString);
+      _laptops = jsonList.map((json) => Laptop.fromJson(json)).toList();
+      print('✅ Loaded ${_laptops.length} laptops from JSON file');
+      // Save to SharedPreferences so it persists
       await _saveLaptops();
+      print('💾 Sample data saved to storage');
     }
-    notifyListeners();
+  } catch (e, stack) {
+    print('❌ Error loading laptops: $e');
+    print(stack);
+    // Fallback: if all else fails, use hardcoded sample data (optional)
+    _initializeSampleData();
+    await _saveLaptops();
   }
+  notifyListeners();
+}
 
   Future<void> _saveLaptops() async {
     print('💾 _saveLaptops() started');
