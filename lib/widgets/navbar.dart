@@ -18,7 +18,6 @@ class Navbar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           GestureDetector(
             onLongPress: onLogoLongPress,
@@ -29,21 +28,22 @@ class Navbar extends StatelessWidget {
                   style: TextStyle(fontSize: 32),
                 ),
                 const SizedBox(width: 10),
-                Text(
-                  'Second Life Computers - Renewed And Ready To Use',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: isDesktop ? 20 : 14,
-                    fontWeight: FontWeight.bold,
+                Flexible(
+                  child: Text(
+                    'Second Life Computers - Renewed And Ready To Use',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: isDesktop ? 20 : 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                    softWrap: true,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
                   ),
-                  softWrap: true,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
           ),
-          // Home tab removed – only logo remains
         ],
       ),
     );
