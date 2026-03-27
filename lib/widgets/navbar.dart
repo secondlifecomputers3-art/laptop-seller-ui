@@ -18,75 +18,33 @@ class Navbar extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // Logo and title
-          Expanded(
-            child: GestureDetector(
-              onLongPress: onLogoLongPress,
-              child: Row(
-                children: [
-                  const Text(
-                    '💻',
-                    style: TextStyle(fontSize: 32),
+          GestureDetector(
+            onLongPress: onLogoLongPress,
+            child: Row(
+              children: [
+                const Text(
+                  '💻',
+                  style: TextStyle(fontSize: 32),
+                ),
+                const SizedBox(width: 10),
+                Text(
+                  'Second Life Computers - Renewed And Ready To Use',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: isDesktop ? 20 : 14,
+                    fontWeight: FontWeight.bold,
                   ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      'Second Life Computers - Renewed And Ready To Use',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: isDesktop ? 20 : 14,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      softWrap: true,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                ],
-              ),
+                  softWrap: true,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
             ),
           ),
-          // Home tab
-          _NavItem(
-            label: 'Home',
-            isSelected: selectedIndex == 0,
-            onTap: () => onItemTapped(0),
-          ),
+          // Home tab removed – only logo remains
         ],
-      ),
-    );
-  }
-}
-
-class _NavItem extends StatelessWidget {
-  final String label;
-  final bool isSelected;
-  final VoidCallback onTap;
-
-  const _NavItem({
-    required this.label,
-    required this.isSelected,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
-        decoration: BoxDecoration(
-          color: isSelected ? Colors.white.withOpacity(0.2) : Colors.transparent,
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Text(
-          label,
-          style: const TextStyle(
-            color: Colors.white,
-            fontSize: 16,
-          ),
-        ),
       ),
     );
   }
