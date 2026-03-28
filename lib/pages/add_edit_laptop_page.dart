@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:image_picker_web/image_picker_web.dart';
-import 'dart:typed_data';
 import 'dart:convert';
 import '../models/laptop.dart';
 import '../providers/laptop_provider.dart';
