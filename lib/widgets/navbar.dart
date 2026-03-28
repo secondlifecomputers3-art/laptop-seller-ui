@@ -21,9 +21,11 @@ class Navbar extends StatelessWidget {
         onLongPress: onLogoLongPress,
         child: Row(
           children: [
-            const Text(
-              '💻',
-              style: TextStyle(fontSize: 32),
+            Image.asset(
+              'assets/images/logo.png',
+              width: 32,
+              height: 32,
+              fit: BoxFit.contain,
             ),
             const SizedBox(width: 10),
             Expanded(

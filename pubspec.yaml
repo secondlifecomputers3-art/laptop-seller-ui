@@ -62,5 +62,7 @@ flutter:
     - assets/thumbnails/Asus-X540Y-1.jpg
     - assets/thumbnails/Mac-2012-1.jpg
     - assets/thumbnails/Lenovo-E41-1.jpg
+    # ... other assets ...
+    - assets/images/logo.png
     # JSON data
     - assets/laptops.json
