@@ -23,8 +23,8 @@ class Navbar extends StatelessWidget {
           children: [
             Image.asset(
               'assets/images/logo.png',
-              width: 32,
-              height: 32,
+              width: 64,
+              height: 64,
               fit: BoxFit.contain,
             ),
             const SizedBox(width: 10),
