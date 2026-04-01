@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Navbar extends StatelessWidget {
   final int selectedIndex;
@@ -34,7 +35,7 @@ class Navbar extends StatelessWidget {
                 children: [
                   Text(
                     'SECOND LIFE COMPUTERS',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: Colors.white,
                       fontSize: isDesktop ? 20 : 16,
                       fontWeight: FontWeight.bold,
@@ -44,7 +45,7 @@ class Navbar extends StatelessWidget {
                   ),
                   Text(
                     'Renewed And Ready To Use',
-                    style: TextStyle(
+                    style: GoogleFonts.poppins(
                       color: Colors.white70,
                       fontSize: isDesktop ? 14 : 10,
                       fontWeight: FontWeight.normal,
