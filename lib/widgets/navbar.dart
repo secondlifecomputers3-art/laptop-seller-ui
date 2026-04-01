@@ -34,18 +34,19 @@ class Navbar extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'SECOND LIFE COMPUTERS',
-                    style: GoogleFonts.poppins(
+                    'Second Life Computers',
+                    style: GoogleFonts.openSans(
                       color: Colors.white,
                       fontSize: isDesktop ? 20 : 16,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.0,
+                      fontWeight: FontWeight.normal,
+                      fontStyle: FontStyle.italic,
+                      letterSpacing: 0.5,
                     ),
                     softWrap: true,
                   ),
                   Text(
                     'Renewed And Ready To Use',
-                    style: GoogleFonts.poppins(
+                    style: GoogleFonts.openSans(
                       color: Colors.white70,
                       fontSize: isDesktop ? 14 : 10,
                       fontWeight: FontWeight.normal,
