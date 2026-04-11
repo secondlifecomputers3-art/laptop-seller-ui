@@ -120,13 +120,12 @@
     "displayType": "HD",
     "price": 16000,
     "stock": 1,
-    "imageUrl": "assets/images/Dell-14-1.jpg",
-    "thumbnailUrl": "assets/thumbnails/Dell-14-1.jpg",
+    "imageUrl": "assets/images/Dell14_1.jpg",
+    "thumbnailUrl": "assets/thumbnails/Dell14_1.jpg",
     "images": [
-      "assets/images/Dell-14-1.jpg",
       "assets/images/Dell-14-2.jpg",
-      "assets/images/Dell-14.3.jpg",
-      "assets/images/Dell-14.4.jpg"
+      "assets/images/Dell-14-3.jpg",
+      "assets/images/Dell-14-4.jpg"
     ],
     "description": "2nd hand Dell Inspiron 14 3000 in mint condition",
     "isAsset": true
