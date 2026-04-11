@@ -55,6 +55,10 @@ flutter:
     - assets/images/Lenovo-E41-2.jpg
     - assets/images/Lenovo-E41-3.jpg
     - assets/images/Lenovo-E41-4.jpg
+    - assets/images/Dell14_1.jpg
+    - assets/images/Dell-14-2.jpg
+    - assets/images/Dell-14-3.jpg
+    - assets/images/Dell-14-4.jpg
     # Thumbnails
     - assets/thumbnails/b41-1.jpg
     - assets/thumbnails/Dell-5300-1.jpg
@@ -63,6 +67,7 @@ flutter:
     - assets/thumbnails/Asus-X540Y-1.jpg
     - assets/thumbnails/Mac-2012-1.jpg
     - assets/thumbnails/Lenovo-E41-1.jpg
+    - assets/thumbnails/Dell14_1.jpg
     # ... other assets ...
     - assets/images/logo.png
     # JSON data
