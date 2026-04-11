@@ -107,5 +107,28 @@
     ],
     "description": "Apple MacBook Air Mid 2012 – classic, lightweight, reliable",
     "isAsset": true
+  },
+  {
+    "id": "8",
+    "brand": "Dell",
+    "model": "Inspiron 14 3000",
+    "processor": "Intel Core i3-1005G1",
+    "ram": "8GB 2400 MHz DDR4",
+    "storage": "256 GB NvME",
+    "graphics": "Intel HD Graphics 4000",
+    "screenSize": 14.0,
+    "displayType": "HD",
+    "price": 16000,
+    "stock": 1,
+    "imageUrl": "assets/images/Dell-14-1.jpg",
+    "thumbnailUrl": "assets/thumbnails/Dell-14-1.jpg",
+    "images": [
+      "assets/images/Dell-14-1.jpg",
+      "assets/images/Dell-14-2.jpg",
+      "assets/images/Dell-14.3.jpg",
+      "assets/images/Dell-14.4.jpg"
+    ],
+    "description": "2nd hand Dell Inspiron 14 3000 in mint condition",
+    "isAsset": true
   }
 ]
