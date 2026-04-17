@@ -66,27 +66,6 @@
     "isAsset": true
   },
   {
-    "id": "6",
-    "brand": "Asus",
-    "model": "X540Y",
-    "processor": "AMD E2-6110 Quad Core",
-    "ram": "4GB DDR3",
-    "storage": "128GB SATA SSD",
-    "graphics": "AMD R2 Onboard",
-    "screenSize": 15.6,
-    "displayType": "HD",
-    "price": 12000,
-    "stock": 1,
-    "imageUrl": "assets/images/Asus-X540Y-1.jpg",
-    "thumbnailUrl": "assets/thumbnails/Asus-X540Y-1.jpg",
-    "images": [
-      "assets/images/Asus-X540Y-2.jpg",
-      "assets/images/Asus-X540Y-3.jpg"
-    ],
-    "description": "Asus X540Y – reliable daily driver with AMD E2 processor",
-    "isAsset": true
-  },
-  {
     "id": "7",
     "brand": "Apple",
     "model": "MacBook Air Mid 2012",
