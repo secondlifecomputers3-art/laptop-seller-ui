@@ -1,27 +1,5 @@
 [
   {
-    "id": "2",
-    "brand": "Lenovo",
-    "model": "V130-15",
-    "processor": "Intel Core i3-7020U",
-    "ram": "8GB DDR4",
-    "storage": "480GB SATA SSD",
-    "graphics": "Integrated",
-    "screenSize": 15.6,
-    "displayType": "HD",
-    "price": 18500,
-    "stock": 1,
-    "imageUrl": "assets/images/Lenovo-V130-1.jpg",
-    "thumbnailUrl": "assets/thumbnails/Lenovo-V130-1.jpg",
-    "images": [
-      "assets/images/Lenovo-V130-2.jpg",
-      "assets/images/Lenovo-V130-3.jpg",
-      "assets/images/Lenovo-V130-4.jpg"
-    ],
-    "description": "Second‑hand Lenovo V130 – powerful i3, 8GB RAM",
-    "isAsset": true
-  },
-  {
     "id": "3",
     "brand": "Lenovo",
     "model": "B41 (4GB)",
