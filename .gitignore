@@ -1,0 +1,9 @@
+﻿build/
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+*.iml
+*.lock
+.DS_Store
+flutter/
+build.bat

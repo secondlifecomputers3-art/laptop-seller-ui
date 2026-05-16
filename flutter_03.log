@@ -1,0 +1,74 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+UnsupportedError: Unsupported operation: Illegal character in path: Dell-14-1.jpg"
+
+```
+#0      _Uri._checkWindowsPathReservedCharacters (dart:core/uri.dart:2171:11)
+#1      _Uri._toWindowsFilePath (dart:core/uri.dart:3470:7)
+#2      _Uri.toFilePath (dart:core/uri.dart:3444:38)
+#3      ManifestAssetBundle._ensureAssetPathIsValid (package:flutter_tools/src/asset.dart:1342:32)
+#4      ManifestAssetBundle._resolveAsset (package:flutter_tools/src/asset.dart:1364:5)
+#5      ManifestAssetBundle._parseAssetFromFile (package:flutter_tools/src/asset.dart:1217:26)
+#6      ManifestAssetBundle._parseAssets (package:flutter_tools/src/asset.dart:1051:9)
+#7      ManifestAssetBundle.build (package:flutter_tools/src/asset.dart:384:54)
+<asynchronous suspension>
+#8      ResidentWebRunner._updateDevFS (package:flutter_tools/src/isolated/resident_web_runner.dart:777:26)
+<asynchronous suspension>
+#9      ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart:334:41)
+<asynchronous suspension>
+#10     asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:108:24)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.41.4, on Microsoft Windows [Version 10.0.19045.3803], locale en-IN) [393ms]
+    [32m•[39m Flutter version 3.41.4 on channel stable at C:\Users\HP\Desktop\isa project\laptop_seller_ui\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision ff37bef603 (6 weeks ago), 2026-03-03 16:03:22 -0800
+    [32m•[39m Engine revision e4b8dca3f1
+    [32m•[39m Dart version 3.11.1
+    [32m•[39m DevTools version 2.54.1
+    [32m•[39m Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop, enable-android, enable-ios,
+      cli-animations, enable-native-assets, omit-legacy-version-file, enable-lldb-debugging, enable-uiscene-migration
+
+[32m[✓][39m Windows Version (10 Home Single Language 64-bit, 22H2, 2009) [1,393ms]
+
+[33m[!][39m Android toolchain - develop for Android devices (Android SDK version 36.1.0) [500ms]
+    [32m•[39m Android SDK at C:\Users\HP\AppData\Local\Android\sdk
+    [32m•[39m Emulator version 36.4.10.0 (build_id 15004761) (CL:N/A)
+    [31m✗[39m cmdline-tools component is missing.
+      Try installing or updating Android Studio.
+      Alternatively, download the tools from https://developer.android.com/studio#command-line-tools-only and make sure to set the
+      ANDROID_HOME environment variable.
+      See https://developer.android.com/studio/command-line for more details.
+    [31m✗[39m Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/to/windows-android-setup for more details.
+
+[32m[✓][39m Chrome - develop for the web [19ms]
+    [32m•[39m Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[31m[✗][39m Visual Studio - develop Windows apps [17ms]
+    [31m✗[39m Visual Studio not installed; this is necessary to develop Windows apps.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[32m[✓][39m Connected device (3 available) [427ms]
+    [32m•[39m Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.19045.3803]
+    [32m•[39m Chrome (web)      • chrome  • web-javascript • Google Chrome 146.0.7680.178
+    [32m•[39m Edge (web)        • edge    • web-javascript • Microsoft Edge 146.0.3856.109
+
+[32m[✓][39m Network resources [963ms]
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 2 categories.
+```

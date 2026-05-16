@@ -1,0 +1,74 @@
+name: laptop_seller_app
+description: A laptop seller app
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  provider: ^6.1.1
+  intl: ^0.18.1
+  shared_preferences: ^2.2.2
+  image_picker: ^1.0.4
+  image_picker_web: ^4.0.0
+  url_launcher: ^6.2.4
+  photo_view: ^0.14.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  google_fonts: ^6.2.1
+  
+flutter:
+  uses-material-design: true
+
+  assets:
+    # Full-size images – note the assets/ prefix
+    - assets/images/b41-1.jpg
+    - assets/images/b41-2.jpg
+    - assets/images/b41-3.jpg
+    - assets/images/b41-4.jpg
+    - assets/images/Dell-5300-1.jpg
+    - assets/images/Dell-5300-2.jpg
+    - assets/images/Dell-5300-3.jpg
+    - assets/images/Dell-5300-4.jpg
+    - assets/images/IP-110-1.jpg
+    - assets/images/IP-110-2.jpg
+    - assets/images/IP-110-3.jpg
+    - assets/images/IP-110-4.jpg
+    - assets/images/Lenovo-V130-1.jpg
+    - assets/images/Lenovo-V130-2.jpg
+    - assets/images/Lenovo-V130-3.jpg
+    - assets/images/Lenovo-V130-4.jpg
+    - assets/images/Asus-X540Y-1.jpg
+    - assets/images/Asus-X540Y-2.jpg
+    - assets/images/Asus-X540Y-3.jpg
+    - assets/images/Mac-2012-1.jpg
+    - assets/images/Mac-2012-2.jpg
+    - assets/images/Mac-2012-3.jpg
+    - assets/images/Mac-2012-4.jpg
+    - assets/images/Lenovo-E41-1.jpg
+    - assets/images/Lenovo-E41-2.jpg
+    - assets/images/Lenovo-E41-3.jpg
+    - assets/images/Lenovo-E41-4.jpg
+    - assets/images/Dell14_1.jpg
+    - assets/images/Dell-14-2.jpg
+    - assets/images/Dell-14-3.jpg
+    - assets/images/Dell-14-4.jpg
+    # Thumbnails
+    - assets/thumbnails/b41-1.jpg
+    - assets/thumbnails/Dell-5300-1.jpg
+    - assets/thumbnails/IP-110-1.jpg
+    - assets/thumbnails/Lenovo-V130-1.jpg
+    - assets/thumbnails/Asus-X540Y-1.jpg
+    - assets/thumbnails/Mac-2012-1.jpg
+    - assets/thumbnails/Lenovo-E41-1.jpg
+    - assets/thumbnails/Dell14_1.jpg
+    # ... other assets ...
+    - assets/images/logo.png
+    # JSON data
+    - assets/laptops.json
