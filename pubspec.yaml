@@ -87,3 +87,10 @@ flutter:
     - assets/images/Dell-14-2.jpg
     - assets/images/Dell-14-3.jpg
     - assets/thumbnails/Dell14_1.jpg
+    
+    # NEW: Lenovo Ideapad 1 Images
+    - assets/images/lenovo ip.jpeg
+    - assets/images/lenovo ip 2.jpeg
+    - assets/images/lenovo ip 3.jpeg
+    - assets/images/lenovo ip 4.jpeg
+    - assets/thumbnails/lenovo ip.jpeg
