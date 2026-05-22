@@ -8,34 +8,52 @@ class LaptopProvider extends ChangeNotifier {
   List<Laptop> get laptops => _laptops;
 
   LaptopProvider() {
-    _loadLaptopsFromJsonOnly();
+    _loadLaptopsFromJson();
   }
 
-  // Only load from JSON - NO HARDCODED DATA
-  Future<void> _loadLaptopsFromJsonOnly() async {
+  Future<void> _loadLaptopsFromJson() async {
     try {
+      print('🔄 Loading laptops from JSON...');
+      
+      // Load JSON from assets
       final String jsonString = await rootBundle.loadString('assets/laptops.json');
+      print('📄 Raw JSON length: ${jsonString.length} characters');
+      
+      // Parse JSON
       final List<dynamic> jsonList = json.decode(jsonString);
+      print('📊 Found ${jsonList.length} items in JSON');
+      
+      // Print each laptop found
+      for (var i = 0; i < jsonList.length; i++) {
+        print('   📱 Item ${i+1}: ${jsonList[i]['brand']} ${jsonList[i]['model']} (ID: ${jsonList[i]['id']})');
+      }
+      
+      // Convert JSON to Laptop objects
       _laptops = jsonList.map((json) => Laptop.fromJson(json)).toList();
-      print('✅ Loaded ${_laptops.length} laptops from laptops.json');
+      
+      print('✅ Successfully loaded ${_laptops.length} laptops');
+      
     } catch (e) {
       print('❌ Error loading laptops.json: $e');
-      _laptops = []; // Empty list if JSON fails
+      _laptops = [];
     }
     notifyListeners();
   }
 
   // Force reload from JSON
-  Future<void> reloadFromJson() async {
-    await _loadLaptopsFromJsonOnly();
+  Future<void> reloadLaptops() async {
+    print('🔄 Manual reload triggered');
+    await _loadLaptopsFromJson();
   }
 
   void addLaptop(Laptop laptop) {
+    print('➕ Adding laptop: ${laptop.brand} ${laptop.model}');
     _laptops.add(laptop);
     notifyListeners();
   }
 
   void updateLaptop(Laptop updatedLaptop) {
+    print('✏️ Updating laptop: ${updatedLaptop.brand} ${updatedLaptop.model}');
     final index = _laptops.indexWhere((l) => l.id == updatedLaptop.id);
     if (index != -1) {
       _laptops[index] = updatedLaptop;
@@ -44,6 +62,7 @@ class LaptopProvider extends ChangeNotifier {
   }
 
   void deleteLaptop(String id) {
+    print('🗑️ Deleting laptop with ID: $id');
     _laptops.removeWhere((laptop) => laptop.id == id);
     notifyListeners();
   }
